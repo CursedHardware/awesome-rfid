@@ -27,11 +27,15 @@ Product page: <https://www.nxp.com/pages/:PN5180>
 - NFC Reader Library for **i.MX7Dual Sabre**
   <br><https://www.nxp.com/docs/en/nxp/application-notes/AN12129.pdf>
 
+## User Guide
+
+- PN5180 SW Quick start guide
+  <br><https://www.nxp.com/docs/en/user-guide/UM10954.pdf>
+
 ## Antenna design
 
 - NFC Antenna Design Hub
   <br><https://www.nxp.com/pages/:NFC-ANTENNA-DESIGN-TOOL>
-- NFC Antenna Design Tool
   <br><https://www.nxp.com/webapp/Download?colCode=NFC-ANTENNA-DESIGN-TOOL-EXE>
 - PN5180 Antenna design tools
   <br><https://www.nxp.com/downloads/en/nxp/software/SW3545.zip>
@@ -60,6 +64,7 @@ Product page: <https://www.nxp.com/pages/:PN5180>
 
 - NFC Cockpit configuration tool for NFC ICs
   <br><https://www.nxp.com/pages/:NFC-COCKPIT>
+  <br><https://www.nxp.com/downloads/en/software-support/SW3524.zip>
 - PN5180 Secure firmware update library
   <br><https://www.nxp.com/downloads/en/software-support/SW4055.zip>
   <br>Secure firmware update: <https://www.nxp.com/docs/en/application-note/AN11781.pdf>
