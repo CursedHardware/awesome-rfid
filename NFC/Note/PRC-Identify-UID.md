@@ -1,18 +1,17 @@
 # Read UID of R.P.C China Identity Card
 
-- Reader require Need support **ISO14443 Type B** protocol
-  <br>e.g: PN53x, PN5180
+- Reader require need support **ISO 14443 Type B** protocol
 
 ## Read UID Logic
 
-| Action           | Data                                  |
-| ---------------- | ------------------------------------- |
-| Send `REQB`      | `05 00 00`                            |
-| Receive `ATQB`   | `50 00 00 00 00 D1 03 86 0C 00 80 80` |
-| Send `ATTRIB`    | `1D 00 00 00 00 00 08 01 08`          |
-| Receive `ATTRIB` | `08`                                  |
-| Send UID Command | `00 36 00 00 08`                      |
-| Receive `UID`    | `** ** ** ** ** ** ** ** 90 00`       |
+|  Action |  Command | Data                                  |
+| ------: | -------: | ------------------------------------- |
+|    Send |   `REQB` | `05 00 00`                            |
+| Receive |   `ATQB` | `50 00 00 00 00 D1 03 86 0C 00 80 80` |
+|    Send | `ATTRIB` | `1D 00 00 00 00 00 08 01 08`          |
+| Receive | `ATTRIB` | `08`                                  |
+|    Send |      UID | `00 36 00 00 08`                      |
+| Receive |      UID | `** ** ** ** ** ** ** ** 90 00`       |
 
 ## PN532 Registry
 
@@ -49,7 +48,7 @@ memcpy(Attrib + 1, PUPI, 4);
 iso14443b_crc_append(Attrib, 9);
 transmit_bytes(Attrib, 11);  // Send ATTRIB
 
-uint8_t ReadGUID[7] = {0x00, 0x36, 0x00, 0x00, 0x08};
+uint8_t ReadGUID[7] = { 0x00, 0x36, 0x00, 0x00, 0x08 };
 iso14443b_crc_append(ReadGUID, 5);
 transmit_bytes(ReadGUID, 7); // Send Read UID Command
 
@@ -60,9 +59,9 @@ exit(EXIT_SUCCESS);
 
 ## References
 
-- [RPC-Identify-UID-Archived.md](RPC-Identify-UID-Archived.md)
 - <https://archive.is/18eP5>
 - <https://archive.is/4dyRt>
 - <https://archive.is/ecX6q>
 - <https://archive.is/FCTsO>
 - <https://www.nxp.com/docs/en/user-guide/141520.pdf>
+- <https://wenku.baidu.com/view/e14ff2f2c8d376eeaeaa318c.html>
